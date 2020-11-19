@@ -7,21 +7,32 @@ const counterState = atom({
     default: 0
 });
 
-class Counter extends React.Component {
-    constructor(props){
-        super(props)
-        const [counter, setCounter] = useRecoilState(counterState);
+function Counter(props){
+    const counter = useRecoilState(counterState);
+    const { t } = props;
 
-    }
-
-
-    render() {
-        return (
-            <div>
-                {counter}
-            </div>
-        )
-    }
+    return (
+        <div>
+            {t("count")}: {counter}
+        </div>
+    )
 }
+
+// class Counter extends React.Component {
+//     constructor(props){
+//         super(props)
+//         // const [counter, setCounter] = useRecoilState(counterState);
+
+//     }
+
+
+//     render() {
+//         return (
+//             <div>
+//                 {/* {counter} */}
+//             </div>
+//         )
+//     }
+// }
 
 export default withTranslation()(Counter)
