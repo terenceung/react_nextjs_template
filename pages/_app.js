@@ -1,13 +1,7 @@
 import '../styles/globals.css';
 import App from 'next/app';
 import { appWithTranslation } from '../i18n';
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from 'recoil';
+import { RecoilRoot } from 'recoil';
 
 // const MyApp = ({ Component, pageProps }) => <RecoilRoot><Component {...pageProps} /></RecoilRoot>
 
