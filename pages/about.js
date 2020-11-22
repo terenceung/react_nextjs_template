@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { withTranslation, Link, Router } from '../i18n';
+import { useRouter } from 'next/router';
 import CounterComponent from '../components/counterComponent';
 import { useRecoilState } from 'recoil';
 import { counterState } from '../globalStates/counterState';
+import BaseLayout from '../components/baseLayout';
 
 
 
-function About(props) {
+function About({t}) {
     const [count, setCount] = useState(0);
     const [count2, setCount2] = useRecoilState(counterState);
 
-    const { t } = props;
-
     function onClickAdd() {
         setCount(count + 1);
-        setCount2(prev=>{
+        setCount2(prev => {
             return {
                 ...prev,
                 count: prev.count + 1
@@ -26,23 +26,25 @@ function About(props) {
         Router.push('/about2');
     }
 
-    
     return (
-        <div>
-            {t('about')}, Count: {count}
+        <BaseLayout title={'About'}>
             <div>
-                <button onClick={onClickAdd}>Add</button>
+                {t('about')}, Count: {count}
+                <div>
+                    <button onClick={onClickAdd}>Add</button>
+                </div>
+                <div>
+                    <button onClick={onClickNavAbout2}>About 2</button>
+                </div>
+                <div>
+                    <Link href='/about2'>About 2</Link>
+                </div>
+                <CounterComponent />
             </div>
-            <div>
-                <button onClick={onClickNavAbout2}>About 2</button>
-            </div>
-            <div>
-                <Link href='/about2'>About 2</Link>
-            </div>
-            <CounterComponent />
-        </div>
+        </BaseLayout>
+
     )
 }
 
 
-export default withTranslation()(About);
+export default withTranslation('common')(About);

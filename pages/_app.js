@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import App from 'next/app';
+import 'antd/dist/antd.css';
 import { appWithTranslation } from '../i18n';
 import { RecoilRoot } from 'recoil';
 
@@ -9,11 +9,10 @@ import { RecoilRoot } from 'recoil';
 
 // export default appWithTranslation(MyApp)
 
-
 function MyApp({Component, pageProps}){
   return(
     <RecoilRoot>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
     </RecoilRoot>
   )
 };

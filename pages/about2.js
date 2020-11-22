@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
 import React from 'react';
+import BaseLayout from '../components/baseLayout';
 import { withTranslation } from '../i18n'
 
 const a = 1;
 
 class About2 extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
     }
 
@@ -13,9 +14,12 @@ class About2 extends React.Component {
     render() {
         const { t } = this.props;
         return (
-            <div>
-                {t('about2')}
-            </div>
+            <BaseLayout>
+                <div>
+                    {t('about2')}
+                </div>
+            </BaseLayout>
+
         )
     }
 }
