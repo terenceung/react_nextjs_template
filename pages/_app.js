@@ -1,7 +1,8 @@
 import '../styles/globals.css';
 import 'antd/dist/antd.css';
 import { appWithTranslation } from '../i18n';
-import { RecoilRoot } from 'recoil';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
 
 // const MyApp = ({ Component, pageProps }) => <RecoilRoot><Component {...pageProps} /></RecoilRoot>
 
@@ -11,9 +12,9 @@ import { RecoilRoot } from 'recoil';
 
 function MyApp({Component, pageProps}){
   return(
-    <RecoilRoot>
+    <Provider store={store}>
         <Component {...pageProps} />
-    </RecoilRoot>
+    </Provider>
   )
 };
 

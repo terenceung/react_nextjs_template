@@ -1,6 +1,3 @@
-
-const a = 1;
-
 export default function Blog({posts}) {
     return (
       <ul>

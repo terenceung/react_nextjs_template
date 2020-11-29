@@ -16,6 +16,12 @@ export const routes = [
             {
                 route: '/setting/network', name: 'network'
             },
-        ] 
+        ]
+    },
+    {
+        route: '/calculator', name: 'calculator'
+    },
+    {
+        route: '/post', name: 'post'
     }
 ];
