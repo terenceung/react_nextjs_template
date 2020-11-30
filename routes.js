@@ -1,4 +1,4 @@
-export const routes = [
+const routes = [
     {
         route: '/', name: 'home' 
     },
@@ -25,3 +25,5 @@ export const routes = [
         route: '/post', name: 'post'
     }
 ];
+
+export default routes;

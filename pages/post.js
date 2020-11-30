@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 
-
+//this page shows how to use redux with axios
 function Post({ t, getPost, post }) {
     useEffect(() => {
         getPost(1);
@@ -46,4 +46,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 }, dispatch)
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(withTranslation('common')(Post));
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation(['common'])(Post));

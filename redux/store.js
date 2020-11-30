@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import calculatorReducer from './calculatorRedux';
-import postReducer from './postRedux';
+import calculator from './calculatorRedux';
+import post from './postRedux';
+import counter from './counterRedux';
 
 const store = configureStore({
   reducer: {
-      calculator: calculatorReducer,
-      post: postReducer
+      calculator,
+      post,
+      counter
   }
 })
 

@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 
-
+//this page shows how to use redux
 function Calculator({t, add, subtract, calculator}) {
     const [num1, setNum1] = useState(0);
     const [num2, setNum2] = useState(0);
@@ -56,4 +56,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 }, dispatch)
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(withTranslation('common')(Calculator));
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation(['common'])(Calculator));

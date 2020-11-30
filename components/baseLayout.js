@@ -14,7 +14,7 @@ import {
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 import { useRouter } from 'next/router';
-import { routes } from '../routes';
+import routes from '../routes';
 import { withTranslation } from '../i18n';
 
 function BaseLayout({ children, title, t, breadcrumbs }) {
@@ -64,4 +64,4 @@ function BaseLayout({ children, title, t, breadcrumbs }) {
   )
 }
 
-export default withTranslation('common')(BaseLayout);
+export default withTranslation(['common'])(BaseLayout);

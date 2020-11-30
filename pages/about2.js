@@ -21,4 +21,4 @@ class About2 extends React.Component {
     }
 }
 
-export default withTranslation()(About2)
+export default withTranslation(['common'])(About2)
