@@ -4,7 +4,7 @@ import { appWithTranslation } from '../i18n';
 import { Provider } from 'react-redux';
 import store from '../redux/store';
 
-// const MyApp = ({ Component, pageProps }) => <RecoilRoot><Component {...pageProps} /></RecoilRoot>
+// const MyApp = ({ Component, pageProps }) => <Provider store={store}><Component {...pageProps} /></Provider>
 
 // MyApp.getInitialProps = async (appContext) => ({ ...await App.getInitialProps(appContext) })
 
@@ -18,4 +18,6 @@ function MyApp({Component, pageProps}){
   )
 };
 
-export default appWithTranslation(MyApp);
+
+// export default appWithTranslation(MyApp);
+export default MyApp;
